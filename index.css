@@ -1,0 +1,31 @@
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+  max-width: 300px;
+  font-family: sans-serif;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.price {
+  color: green;
+}
+
+.description {
+  margin-top: 8px;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn {
+  margin-top: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
