@@ -36,9 +36,18 @@ products.forEach(goods => {
   divDescription.classList.add('description')
   divDescription.textContent = goods.description
 
+  const buyBtn = document.createElement('button')
+  buyBtn.classList.add('btn', 'buy-btn')
+  buyBtn.textContent = 'Купить'
 
-  divCard.append(divTitle, divPrice, divDescription)
+  const moreBtn = document.createElement('button')
+  moreBtn.classList.add('btn', 'more-btn')
+  moreBtn.textContent = 'Подробнее'
+
+  divCard.append(divTitle, divPrice, divDescription, buyBtn, moreBtn)
   
+  document.body.append(divCard)
+
   console.log(goods)
   console.log(divCard)
 })
