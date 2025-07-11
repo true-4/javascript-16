@@ -35,19 +35,26 @@ products.forEach(goods => {
   const divDescription = document.createElement('div')
   divDescription.classList.add('description')
   divDescription.textContent = goods.description
+  divDescription.style.hidden
 
   const buyBtn = document.createElement('button')
   buyBtn.classList.add('btn', 'buy-btn')
   buyBtn.textContent = 'Купить'
 
+  buyBtn.addEventListener('click', () => {
+    buyBtn.textContent = 'В корзине'
+    buyBtn.disabled = true
+  })
+
   const moreBtn = document.createElement('button')
   moreBtn.classList.add('btn', 'more-btn')
   moreBtn.textContent = 'Подробнее'
 
+  moreBtn.addEventListener('click', () => {
+    divDescription.hidden = !divDescription.hidden
+  })
+
   divCard.append(divTitle, divPrice, divDescription, buyBtn, moreBtn)
   
   document.body.append(divCard)
-
-  console.log(goods)
-  console.log(divCard)
 })
