@@ -35,7 +35,7 @@ products.forEach(goods => {
   const divDescription = document.createElement('div')
   divDescription.classList.add('description')
   divDescription.textContent = goods.description
-  divDescription.style.hidden
+  divDescription.hidden = true
 
   const buyBtn = document.createElement('button')
   buyBtn.classList.add('btn', 'buy-btn')
